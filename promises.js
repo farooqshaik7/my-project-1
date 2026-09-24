@@ -27,3 +27,12 @@ function main() {
 }
 
 waitFor3S(main)
+
+
+//////////////////////////////////////////////////////
+
+function random() {
+
+}
+let p = new Promise(random);  
+console.log(p);
