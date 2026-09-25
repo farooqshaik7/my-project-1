@@ -27,12 +27,26 @@ function main() {
 }
 
 waitFor3S(main)
+///////////////////////////////////////////////////////
+
+
+function waitFor2s(resolves) {
+    sedtTimeout(resolves, 3000)
+}
+function setTimeoutPromisified() {
+    return new Promise(waitfor2s);
+}
+function main() {
+    console.log("Main is called")
+}
+setTimeoutPromisified().then(main);
 
 
 //////////////////////////////////////////////////////
 
+
 function random() {
 
 }
-let p = new Promise(random);  
+let p = new Promise(random);  //Supposed tp return something eventually.
 console.log(p);
